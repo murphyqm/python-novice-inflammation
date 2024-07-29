@@ -11,10 +11,10 @@
 carpentry: 'swc'
 
 # Overall title for pages.
-title: 'Programming with Python'
+title: 'SWD1a: Introduction to Python'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: '2014-11-25'
+created: '2024-07-29'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'

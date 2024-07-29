@@ -198,12 +198,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#overview">Overview</a></li>
-<li><a href="#install-python">Install Python</a></li>
+<li><a href="#get-python">Get Python</a></li>
 <li><a href="#obtain-lesson-materials">Obtain lesson materials</a></li>
-<li><a href="#launch-python-interface">Launch Python interface</a></li>
-<li><a href="#option-a-jupyter-notebook">Option A: Jupyter Notebook</a></li>
-<li><a href="#option-b-ipython-interpreter">Option B: IPython interpreter</a></li>
-<li><a href="#option-c-plain-vanilla-python-interpreter">Option C: plain-vanilla Python interpreter</a></li>
+<li><a href="#after-this-course-install-python">After this course: install Python</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -222,7 +219,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-numpy.html">2. Analyzing Patient Data</a>
+        <a href="04-lists.html">2. Storing Multiple Values in Lists</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -231,7 +228,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-matplotlib.html">3. Visualizing Tabular Data</a>
+        <a href="05-loop.html">3. Repeating Actions with Loops</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -240,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-lists.html">4. Storing Multiple Values in Lists</a>
+        <a href="02-numpy.html">4. Analyzing Patient Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -249,7 +246,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-loop.html">5. Repeating Actions with Loops</a>
+        <a href="03-matplotlib.html">5. Visualizing Tabular Data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -429,8 +426,9 @@ recommend if possible.</p>
 </div>
 <div class="section level3">
 <h3 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a></h3>
-<p>To get started, follow the directions on the <a href="index.html#setup">Setup</a> page to download data and install a Python
-interpreter.</p>
+<p>To get started, follow the directions on the <a href="index.html#setup">Setup</a> page to open up Google colab. After the
+course, you can follow the intructions here to install a Python
+interpreter locally on your machine.</p>
 </div>
 
 
@@ -439,19 +437,44 @@ interpreter.</p>
 <hr class="half-width"><p>This lesson is designed to be run on a personal computer. All of the
 software and data used in this lesson are freely available online, and
 instructions on how to obtain them are provided below.</p>
-</section><section><h2 class="section-heading" id="install-python">Install Python<a class="anchor" aria-label="anchor" href="#install-python"></a>
-<a class="anchor" aria-label="anchor" href="#install-python"></a></h2>
+</section><section><h2 class="section-heading" id="get-python">Get Python<a class="anchor" aria-label="anchor" href="#get-python"></a>
+<a class="anchor" aria-label="anchor" href="#get-python"></a></h2>
 <hr class="half-width"><p>In this lesson, we will be using Python 3 with some of its most
-popular scientific libraries. Although one can install a plain-vanilla
-Python and all required libraries by hand, we recommend installing <a href="https://www.anaconda.com/" class="external-link">Anaconda</a>, a Python distribution
-that comes with everything we need for the lesson. Detailed installation
-instructions for various operating systems can be found on The
-Carpentries <a href="https://carpentries.github.io/workshop-template/install_instructions/#python" class="external-link">template
-website for workshops</a> and in <a href="https://docs.anaconda.com/anaconda/install" class="external-link">Anaconda
-documentation</a>.</p>
+popular scientific libraries. We are going to be using <a href="https://colab.google/" class="external-link">Google Colab</a>, a hosted Jupyter Notebook
+service that requires no setup to use and provides free access to
+computing resources, including GPUs and TPUs.</p>
+<p>To get started, you just need to log in with a Google account and
+click <a href="https://colab.new/" class="external-link">“New Notebook”</a>.</p>
 </section><section><h2 class="section-heading" id="obtain-lesson-materials">Obtain lesson materials<a class="anchor" aria-label="anchor" href="#obtain-lesson-materials"></a>
 <a class="anchor" aria-label="anchor" href="#obtain-lesson-materials"></a></h2>
-<hr class="half-width"><ol style="list-style-type: decimal"><li>Download <a href="data/python-novice-inflammation-data.zip">python-novice-inflammation-data.zip</a>
+<hr class="half-width"><p>There a few different ways of loading in the data.</p>
+<div class="section level3">
+<h3 id="download-it-directly-in-colab">1. Download it directly in Colab<a class="anchor" aria-label="anchor" href="#download-it-directly-in-colab"></a></h3>
+<p>In Colab, you can access the terminal of the remote machine by using
+<code>!</code> in front of Linux bash commands. This means you can use
+the Linux command <code>wget</code> to download files from the
+internet.</p>
+<p><strong>Note: the file storage space on the remote machine you are
+using in Google Colab is not persistent: the files and folders you
+upload/save will not still be there when you next log in. Please
+download your work if you want to save it.</strong></p>
+<div class="section level4">
+<h4 id="download-files">Download files<a class="anchor" aria-label="anchor" href="#download-files"></a></h4>
+<pre class="python="><code># Download 2 files and store in the swc-python folder
+!wget -P swc-python https://swcarpentry.github.io/python-novice-inflammation/data/python-novice-inflammation-data.zip
+!wget -P swc-python https://swcarpentry.github.io/python-novice-inflammation/files/code/python-novice-inflammation-code.zip</code></pre>
+</div>
+<div class="section level4">
+<h4 id="unzip-files">Unzip files<a class="anchor" aria-label="anchor" href="#unzip-files"></a></h4>
+<pre class="python="><code># Extract .zip files inside the folder swc-python/
+!unzip /content/swc-python/python-novice-inflammation-code.zip -d /content/swc-python/
+!unzip /content/swc-python/python-novice-inflammation-data.zip -d /content/swc-python/</code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="manual-download">2. Manual download<a class="anchor" aria-label="anchor" href="#manual-download"></a></h3>
+<p>You can download the files and code directly to your machine:</p>
+<ol style="list-style-type: decimal"><li>Download <a href="data/python-novice-inflammation-data.zip">python-novice-inflammation-data.zip</a>
 and <a href="files/code/python-novice-inflammation-code.zip">python-novice-inflammation-code.zip</a>.</li>
 <li>Create a folder called <code>swc-python</code> on your Desktop.</li>
 <li>Move downloaded files to <code>swc-python</code>.</li>
@@ -459,16 +482,32 @@ and <a href="files/code/python-novice-inflammation-code.zip">python-novice-infla
 </ol><p>You should see two folders called <code>data</code> and
 <code>code</code> in the <code>swc-python</code> directory on your
 Desktop.</p>
-</section><section><h2 class="section-heading" id="launch-python-interface">Launch Python interface<a class="anchor" aria-label="anchor" href="#launch-python-interface"></a>
-<a class="anchor" aria-label="anchor" href="#launch-python-interface"></a></h2>
-<hr class="half-width"><p>To start working with Python, we need to launch a program that will
+<p>You can then use the files dialogue in the right hand panel of Colab
+to upload these files.</p>
+</div>
+</section><section><h2 class="section-heading" id="after-this-course-install-python">After this course: install Python<a class="anchor" aria-label="anchor" href="#after-this-course-install-python"></a>
+<a class="anchor" aria-label="anchor" href="#after-this-course-install-python"></a></h2>
+<hr class="half-width"><p>When you are working on research coding, you will want to use Python
+from your local machine. Here are some instructions for you to follow
+<em>after</em> this course, to set up Python on your machine.</p>
+<p>Although one can install a plain-vanilla Python and all required
+libraries by hand, we recommend installing <a href="https://www.anaconda.com/" class="external-link">Anaconda</a>, a Python distribution
+that comes with everything we need for the lesson. Detailed installation
+instructions for various operating systems can be found on The
+Carpentries <a href="https://carpentries.github.io/workshop-template/install_instructions/#python" class="external-link">template
+website for workshops</a> and in <a href="https://docs.anaconda.com/anaconda/install" class="external-link">Anaconda
+documentation</a>.</p>
+<div class="section level3">
+<h3 id="launch-python-interface">Launch Python interface<a class="anchor" aria-label="anchor" href="#launch-python-interface"></a></h3>
+<p>To start working with Python, we need to launch a program that will
 interpret and execute our Python commands. Below we list several
 options. If you don’t have a preference, proceed with the top option in
 the list that is available on your machine. Otherwise, you may use any
 interface you like.</p>
-</section><section><h2 class="section-heading" id="option-a-jupyter-notebook">Option A: Jupyter Notebook<a class="anchor" aria-label="anchor" href="#option-a-jupyter-notebook"></a>
-<a class="anchor" aria-label="anchor" href="#option-a-jupyter-notebook"></a></h2>
-<hr class="half-width"><p>A Jupyter Notebook provides a browser-based interface for working
+</div>
+<div class="section level3">
+<h3 id="option-a-jupyter-notebook">Option A: Jupyter Notebook<a class="anchor" aria-label="anchor" href="#option-a-jupyter-notebook"></a></h3>
+<p>A Jupyter Notebook provides a browser-based interface for working
 with Python. If you installed Anaconda, you can launch a notebook in two
 ways:</p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
@@ -479,7 +518,7 @@ ways:</p>
   Anaconda Navigator
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Launch Anaconda Navigator. It might ask you if you’d like to send
 anonymized usage information to Anaconda developers: <img src="fig/anaconda-navigator-first-launch.png" alt="Anaconda Navigator first launch" class="figure"> Make your choice and click “Ok,
@@ -504,7 +543,7 @@ selecting “Python 3”: <img src="fig/jupyter-notebook-launch-notebook.png" al
   Command line (Terminal)
   </h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
 <div class="accordion-body">
 <p>1. Navigate to the <code>data</code> directory:</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
@@ -515,15 +554,15 @@ selecting “Python 3”: <img src="fig/jupyter-notebook-launch-notebook.png" al
   Unix shell
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>If you’re using a Unix shell application, such as Terminal app in
 macOS, Console or Terminal in Linux, or <a href="https://gitforwindows.org" class="external-link">Git Bash</a> on Windows, execute the
 following command:</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">cd</span> ~/Desktop/swc-python/data</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">cd</span> ~/Desktop/swc-python/data</span></code></pre>
 </div>
 </div>
 </div>
@@ -537,7 +576,7 @@ following command:</p>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>On Windows, you can use its native Command Prompt program. The
 easiest way to start it up is pressing <kbd>Windows Logo
@@ -558,12 +597,12 @@ navigate to the <code>data</code> folder:</p>
   Unix shell
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code></pre>
 </div>
 </div>
 </div>
@@ -577,7 +616,7 @@ navigate to the <code>data</code> folder:</p>
   Command Prompt (Windows)
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <pre class="source"><code>python -m notebook</code></pre>
 </div>
@@ -591,9 +630,10 @@ and selecting “Python 3” from the drop-down menu: <img src="fig/jupyter-note
 </div>
 </div>
 <p>  <!-- vertical spacer --></p>
-</section><section><h2 class="section-heading" id="option-b-ipython-interpreter">Option B: IPython interpreter<a class="anchor" aria-label="anchor" href="#option-b-ipython-interpreter"></a>
-<a class="anchor" aria-label="anchor" href="#option-b-ipython-interpreter"></a></h2>
-<hr class="half-width"><p>IPython is an alternative solution situated somewhere in between the
+</div>
+<div class="section level3">
+<h3 id="option-b-ipython-interpreter">Option B: IPython interpreter<a class="anchor" aria-label="anchor" href="#option-b-ipython-interpreter"></a></h3>
+<p>IPython is an alternative solution situated somewhere in between the
 plain-vanilla Python interpreter and Jupyter Notebook. It provides an
 interactive command-line based interpreter with various convenience
 features and commands. You should have IPython on your system if you
@@ -601,14 +641,16 @@ installed <a href="https://carpentries.github.io/workshop-template/install_instr
 <p>To start using IPython, execute:</p>
 <pre class="source"><code><span><span class="va">ipython</span></span></code></pre>
 <p>  <!-- vertical spacer --></p>
-</section><section><h2 class="section-heading" id="option-c-plain-vanilla-python-interpreter">Option C: plain-vanilla Python interpreter<a class="anchor" aria-label="anchor" href="#option-c-plain-vanilla-python-interpreter"></a>
-<a class="anchor" aria-label="anchor" href="#option-c-plain-vanilla-python-interpreter"></a></h2>
-<hr class="half-width"><p>To launch a plain-vanilla Python interpreter, execute:</p>
+</div>
+<div class="section level3">
+<h3 id="option-c-plain-vanilla-python-interpreter">Option C: plain-vanilla Python interpreter<a class="anchor" aria-label="anchor" href="#option-c-plain-vanilla-python-interpreter"></a></h3>
+<p>To launch a plain-vanilla Python interpreter, execute:</p>
 <pre class="source"><code><span><span class="va">python</span></span></code></pre>
 <p>If you are using <a href="https://gitforwindows.org" class="external-link">Git Bash on
 Windows</a>, you have to call Python <em>via</em>
 <code>winpty</code>:</p>
 <pre class="source"><code>winpty python</code></pre>
+</div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="01-intro.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>

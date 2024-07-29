@@ -3,6 +3,16 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
+## Welcome to SWD1a: Programming with Python
+
+This website contains materials from [The Carpentries](https://carpentries.org/), with
+some small modifications to tailor it to our needs.
+
+Please refer to your course hackpad for additional links, topics, and discussion
+points specific to your course.
+
+## The format of this workshop
+
 The best way to learn how to program is to do something useful,
 so this introduction to Python is built around a common scientific task:
 **data analysis**.

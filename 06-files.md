@@ -17,6 +17,13 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+At the start of this course, we looked at lists and loops; then we moved
+on to using numpy arrays to look at the inflammation data in more depth,
+and using matplotlib to visualise the data.
+How can we combine these different topics to process *all* the data?
+
+## Finding multiple files
+
 As a final piece to processing our inflammation data, we need a way to get a list of all the files
 in our `data` directory whose names start with `inflammation-` and end with `.csv`.
 The following library will help us to achieve this:
@@ -48,6 +55,8 @@ This means we can loop over it
 to do something with each filename in turn.
 In our case,
 the "something" we want to do is generate a set of plots for each file in our inflammation dataset.
+
+## Plotting multiple datasets
 
 If we want to start by analyzing just the first three files in alphabetical order, we can use the
 `sorted` built-in function to generate a new sorted list from the `glob.glob` output:

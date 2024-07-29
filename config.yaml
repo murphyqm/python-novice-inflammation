@@ -11,10 +11,10 @@
 carpentry: 'swc'
 
 # Overall title for pages.
-title: 'Programming with Python'
+title: 'SWD1a: Introduction to Python'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: '2014-11-25'
+created: '2024-07'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -27,7 +27,7 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/swcarpentry/python-novice-inflammation'
+source: 'https://github.com/arctraining/python-novice-inflammation'
 
 # Default branch of your lesson
 branch: 'main'
@@ -87,6 +87,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: 'https://swcarpentry.github.io/python-novice-inflammation'
+url: 'https://arctraining.github.io/python-novice-inflammation'
 analytics: carpentries
 lang: en

@@ -19,12 +19,6 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In the episode about visualizing data,
-we wrote Python code that plots values of interest from our first
-inflammation dataset (`inflammation-01.csv`), which revealed some suspicious features in it.
-
-![](fig/03-loop_2_0.png){alt="Line graphs showing average, maximum and minimum inflammation across all patients over a 40-dayperiod."}
-
 We have a dozen data sets right now and potentially more on the way if Dr. Maverick
 can keep up their surprisingly fast clinical trial rate. We want to create plots for all of
 our data sets with a single statement. To do that, we'll have to teach the computer how to

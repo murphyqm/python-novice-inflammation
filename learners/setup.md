@@ -8,17 +8,47 @@ This lesson is designed to be run on a personal computer.
 All of the software and data used in this lesson are freely available online,
 and instructions on how to obtain them are provided below.
 
-## Install Python
+## Get Python
 
 In this lesson, we will be using Python 3 with some of its most popular scientific libraries.
-Although one can install a plain-vanilla Python and all required libraries by hand,
-we recommend installing [Anaconda][anaconda-website],
-a Python distribution that comes with everything we need for the lesson.
-Detailed installation instructions for various operating systems can be found
-on The Carpentries [template website for workshops][anaconda-instructions]
-and in [Anaconda documentation][anaconda-install].
+We are going to be using [Google Colab](https://colab.google/), a hosted Jupyter Notebook service
+that requires no setup to use and provides free access to computing resources,
+including GPUs and TPUs.
+
+To get started, you just need to log in with a Google account and click ["New Notebook"](https://colab.new/).
 
 ## Obtain lesson materials
+
+There a few different ways of loading in the data.
+
+### 1. Download it directly in Colab
+
+In Colab, you can access the terminal of the remote machine by using `!` in front of Linux
+bash commands. This means you can use the Linux command `wget` to download files from the internet.
+
+**Note: the file storage space on the remote machine you are using in Google Colab is not persistent:
+the files and folders you upload/save will not still be there when you next log in. Please download
+your work if you want to save it.**
+
+#### Download files
+
+```python=
+# Download 2 files and store in the swc-python folder
+!wget -P swc-python https://swcarpentry.github.io/python-novice-inflammation/data/python-novice-inflammation-data.zip 
+!wget -P swc-python https://swcarpentry.github.io/python-novice-inflammation/files/code/python-novice-inflammation-code.zip
+```
+
+#### Unzip files
+
+```python=
+# Extract .zip files inside the folder swc-python/
+!unzip /content/swc-python/python-novice-inflammation-code.zip -d /content/swc-python/
+!unzip /content/swc-python/python-novice-inflammation-data.zip -d /content/swc-python/
+```
+
+### 2. Manual download
+
+You can download the files and code directly to your machine:
 
 1. Download [python-novice-inflammation-data.zip][zipfile1]
   and [python-novice-inflammation-code.zip][zipfile2].
@@ -29,21 +59,36 @@ and in [Anaconda documentation][anaconda-install].
 You should see two folders called `data` and `code` in the `swc-python` directory on your
 Desktop.
 
-## Launch Python interface
+You can then use the files dialogue in the right hand panel of Colab to upload these files.
+
+## After this course: install Python
+
+When you are working on research coding, you will want to use Python from your local
+machine. Here are some instructions for you to follow *after* this course, to set
+up Python on your machine.
+
+Although one can install a plain-vanilla Python and all required libraries by hand,
+we recommend installing [Anaconda][anaconda-website],
+a Python distribution that comes with everything we need for the lesson.
+Detailed installation instructions for various operating systems can be found
+on The Carpentries [template website for workshops][anaconda-instructions]
+and in [Anaconda documentation][anaconda-install].
+
+### Launch Python interface
 
 To start working with Python, we need to launch a program that will interpret and execute our
 Python commands. Below we list several options. If you don't have a preference, proceed with the
 top option in the list that is available on your machine. Otherwise, you may use any interface
 you like.
 
-## Option A: Jupyter Notebook
+### Option A: Jupyter Notebook
 
 A Jupyter Notebook provides a browser-based interface for working with Python.
 If you installed Anaconda, you can launch a notebook in two ways:
 
 ::::::::::::::::: spoiler
 
-## Anaconda Navigator
+### Anaconda Navigator
 
 1. Launch Anaconda Navigator.
   It might ask you if you'd like to send anonymized usage information to Anaconda developers:
@@ -64,13 +109,13 @@ If you installed Anaconda, you can launch a notebook in two ways:
 
 ::::::::::::::::: spoiler
 
-## Command line (Terminal)
+### Command line (Terminal)
 
 1\. Navigate to the `data` directory:
 
 ::::::::::::::::: spoiler
 
-## Unix shell
+### Unix shell
 
 If you're using a Unix shell application, such as Terminal app in macOS, Console or Terminal
 in Linux, or [Git Bash][gitbash] on Windows, execute the following command:
@@ -83,7 +128,7 @@ cd ~/Desktop/swc-python/data
 
 ::::::::::::::::: spoiler
 
-## Command Prompt (Windows)
+### Command Prompt (Windows)
 
 On Windows, you can use its native Command Prompt program.  The easiest way to start it up is
 pressing <kbd>Windows Logo Key</kbd>\+<kbd>R</kbd>, entering `cmd`, and hitting
@@ -100,7 +145,7 @@ cd /D %userprofile%\Desktop\swc-python\data
 
 ::::::::::::::::: spoiler
 
-## Unix shell
+### Unix shell
 
 ```bash
 jupyter notebook
@@ -111,7 +156,7 @@ jupyter notebook
 
 ::::::::::::::::: spoiler
 
-## Command Prompt (Windows)
+### Command Prompt (Windows)
 
 ```source
 python -m notebook
@@ -127,7 +172,7 @@ from the drop-down menu:
 
   <!-- vertical spacer -->
 
-## Option B: IPython interpreter
+### Option B: IPython interpreter
 
 IPython is an alternative solution situated somewhere in between the plain-vanilla Python
 interpreter and Jupyter Notebook. It provides an interactive command-line based interpreter with
@@ -142,7 +187,7 @@ ipython
 
   <!-- vertical spacer -->
 
-## Option C: plain-vanilla Python interpreter
+### Option C: plain-vanilla Python interpreter
 
 To launch a plain-vanilla Python interpreter, execute:
 

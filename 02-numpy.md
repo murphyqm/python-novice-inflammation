@@ -218,7 +218,7 @@ It takes a bit of getting used to,
 but one way to remember the rule is that
 the index is how many steps we have to take from the start to get the item we want.
 
-![](fig/python-zero-index.svg){alt="'data' is a 3 by 3 numpy array containing row 0: \['A', 'B', 'C'\], row 1: \['D', 'E', 'F'\], androw 2: \['G', 'H', 'I'\]. Starting in the upper left hand corner, data\[0, 0\] = 'A', data\[0, 1\] = 'B',data\[0, 2\] = 'C', data\[1, 0\] = 'D', data\[1, 1\] = 'E', data\[1, 2\] = 'F', data\[2, 0\] = 'G',data\[2, 1\] = 'H', and data\[2, 2\] = 'I',in the bottom right hand corner."}
+![](fig/python-zero-index.svg){alt="'data' is a 3 by 3 numpy array containing row 0: \['A', 'B', 'C'\], row 1: \['D', 'E', 'F'\], androw 2: \['G', 'H', 'I'\]. Starting in the upper left hand corner, data\[0, 0\] = 'A', data\[0, 1\] = 'B',data\[0, 2\] = 'C', data\[1, 0\] = 'D', data\[1, 1\] = 'E', data\[1, 2\] = 'F', data\[2, 0\] = 'G',data\[2, 1\] = 'H', and data\[2, 2\] = 'I', in the bottom right hand corner."}
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -373,6 +373,18 @@ and press the <kbd>Tab</kbd> key twice for a listing of what is available. You c
 `help()` function to see an explanation of the function you're interested in,
 for example: `help(numpy.cumprod)`.
 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Confusing Function Names
+
+One might wonder why the functions are called `amax` and `amin` and not `max` and `min` or why the other is called `mean` and not `amean`.
+The package `numpy` does provide functions `max` and `min` that are fully equivalent to `amax` and `amin`, but they share a name with standard library functions `max` and `min` that come with Python itself.
+Referring to the functions like we did above, that is `numpy.max` for example, does not cause problems, but there are other ways to refer to them that could.
+In addition, text editors might highlight (color) these functions like standard library function, even though they belong to NumPy, which can be confusing and lead to errors.
+Since there is no function called `mean` in the standard library, there is no function called `amean`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -585,7 +597,7 @@ using NumPy's `vstack` and `hstack` functions for vertical and horizontal stacki
 ```python
 import numpy
 
-A = numpy.array([[1,2,3], [4,5,6], [7, 8, 9]])
+A = numpy.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 print('A = ')
 print(A)
 

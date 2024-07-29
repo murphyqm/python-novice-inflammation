@@ -182,8 +182,8 @@ Inside a function, one can read the value of such global variables:
 
 ```python
 def print_temperatures():
-  print('temperature in Fahrenheit was:', temp_fahr)
-  print('temperature in Kelvin was:', temp_kelvin)
+    print('temperature in Fahrenheit was:', temp_fahr)
+    print('temperature in Kelvin was:', temp_kelvin)
 
 temp_fahr = 212.0
 temp_kelvin = fahr_to_kelvin(temp_fahr)
@@ -286,7 +286,7 @@ let's use NumPy to create a matrix of 0's
 and then offset its values to have a mean value of 3:
 
 ```python
-z = numpy.zeros((2,2))
+z = numpy.zeros((2, 2))
 print(offset_mean(z, 3))
 ```
 

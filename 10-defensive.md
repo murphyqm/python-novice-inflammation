@@ -264,7 +264,7 @@ The range of each time series is represented as a pair of numbers,
 which are the time the interval started and ended.
 The output is the largest range that they all include:
 
-![](fig/python-overlapping-ranges.svg){alt='Graph showing three number lines and, at the bottom,the interval that they overlap.'}
+![](fig/python-overlapping-ranges.svg){alt='Graph showing three number lines and, at the bottom, the interval that they overlap.'}
 
 Most novice programmers would solve this problem like this:
 
@@ -456,7 +456,7 @@ This violates another important rule of programming:
 ## Pre- and Post-Conditions
 
 Suppose you are writing a function called `average` that calculates
-the average of the numbers in a list.
+the average of the numbers in a NumPy array.
 What pre-conditions and post-conditions would you write for it?
 Compare your answer to your neighbor's:
 can you think of a function that will pass your tests but not his/hers or vice versa?
@@ -467,9 +467,9 @@ can you think of a function that will pass your tests but not his/hers or vice v
 
 ```python
 # a possible pre-condition:
-assert len(input_list) > 0, 'List length must be non-zero'
+assert len(input_array) > 0, 'Array length must be non-zero'
 # a possible post-condition:
-assert numpy.amin(input_list) <= average <= numpy.amax(input_list),
+assert numpy.amin(input_array) <= average <= numpy.amax(input_array),
 'Average should be between min and max of input values (inclusive)'
 ```
 
@@ -505,7 +505,7 @@ and for each one,
 give an example of input that will make that assertion fail.
 
 ```python
-def get_total(values):
+def get_total_cars(values):
     assert len(values) > 0
     for element in values:
         assert int(element)

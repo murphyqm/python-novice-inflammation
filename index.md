@@ -3,10 +3,11 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-## Welcome to SWD1a: Programming with Python
+## Welcome to SWD1a: Introduction to Python
 
 This website contains materials from [The Carpentries](https://carpentries.org/), with
-some small modifications to tailor it to our needs.
+some small modifications to tailor it to our needs for *SWD1a: Introduction to Python*
+here at the University of Leeds.
 
 Please refer to your course hackpad for additional links, topics, and discussion
 points specific to your course.

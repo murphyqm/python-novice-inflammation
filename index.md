@@ -70,8 +70,9 @@ recommend if possible.
 
 ### Getting Started
 
-To get started, follow the directions on the [Setup](learners/setup.md) page to download data
-and install a Python interpreter.
+To get started, follow the directions on the [Setup](learners/setup.md) page to open up Google colab.
+After the course, you can follow the intructions here to install a Python interpreter locally on your
+machine.
 
 
 

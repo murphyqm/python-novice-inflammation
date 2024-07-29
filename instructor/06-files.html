@@ -241,12 +241,20 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         6. Analyzing Data from Multiple Files
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#finding-multiple-files">Finding multiple files</a></li>
+<li><a href="#plotting-multiple-datasets">Plotting multiple datasets</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -400,7 +408,13 @@ wildcard pattern.</li>
 </div>
 </div>
 </div>
-<p>As a final piece to processing our inflammation data, we need a way
+<p>At the start of this course, we looked at lists and loops; then we
+moved on to using numpy arrays to look at the inflammation data in more
+depth, and using matplotlib to visualise the data. How can we combine
+these different topics to process <em>all</em> the data?</p>
+<section><h2 class="section-heading" id="finding-multiple-files">Finding multiple files<a class="anchor" aria-label="anchor" href="#finding-multiple-files"></a>
+<a class="anchor" aria-label="anchor" href="#finding-multiple-files"></a></h2>
+<hr class="half-width"><p>As a final piece to processing our inflammation data, we need a way
 to get a list of all the files in our <code>data</code> directory whose
 names start with <code>inflammation-</code> and end with
 <code>.csv</code>. The following library will help us to achieve
@@ -433,7 +447,9 @@ file and directory paths in arbitrary order. This means we can loop over
 it to do something with each filename in turn. In our case, the
 “something” we want to do is generate a set of plots for each file in
 our inflammation dataset.</p>
-<p>If we want to start by analyzing just the first three files in
+</section><section><h2 class="section-heading" id="plotting-multiple-datasets">Plotting multiple datasets<a class="anchor" aria-label="anchor" href="#plotting-multiple-datasets"></a>
+<a class="anchor" aria-label="anchor" href="#plotting-multiple-datasets"></a></h2>
+<hr class="half-width"><p>If we want to start by analyzing just the first three files in
 alphabetical order, we can use the <code>sorted</code> built-in function
 to generate a new sorted list from the <code>glob.glob</code>
 output:</p>
@@ -663,10 +679,7 @@ and <code>?</code> to match any single character.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/03-matplotlib.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/07-cond.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

@@ -187,12 +187,20 @@
                   <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         Summary and Schedule
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#welcome-to-swd1a-programming-with-python">Welcome to SWD1a: Programming with Python</a></li>
+<li><a href="#the-format-of-this-workshop">The format of this workshop</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -356,7 +364,15 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
 
-<p>The best way to learn how to program is to do something useful, so
+<section><h2 class="section-heading" id="welcome-to-swd1a-programming-with-python">Welcome to SWD1a: Programming with Python<a class="anchor" aria-label="anchor" href="#welcome-to-swd1a-programming-with-python"></a>
+<a class="anchor" aria-label="anchor" href="#welcome-to-swd1a-programming-with-python"></a></h2>
+<hr class="half-width"><p>This website contains materials from <a href="https://carpentries.org/" class="external-link">The Carpentries</a>, with some small
+modifications to tailor it to our needs.</p>
+<p>Please refer to your course hackpad for additional links, topics, and
+discussion points specific to your course.</p>
+</section><section><h2 class="section-heading" id="the-format-of-this-workshop">The format of this workshop<a class="anchor" aria-label="anchor" href="#the-format-of-this-workshop"></a>
+<a class="anchor" aria-label="anchor" href="#the-format-of-this-workshop"></a></h2>
+<hr class="half-width"><p>The best way to learn how to program is to do something useful, so
 this introduction to Python is built around a common scientific task:
 <strong>data analysis</strong>.</p>
 <div class="section level3">
@@ -420,9 +436,7 @@ recommend if possible.</p>
 course, you can follow the intructions here to install a Python
 interpreter locally on your machine.</p>
 </div>
-
-
-      <section id="schedule"><table class="table table schedule table-striped" role="presentation"><tbody><tr><td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
+</section><section id="schedule"><table class="table table schedule table-striped" role="presentation"><tbody><tr><td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
           </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>

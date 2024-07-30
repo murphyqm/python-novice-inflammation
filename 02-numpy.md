@@ -26,9 +26,6 @@ specialized tools built up from these basic units live in
 [libraries](../learners/reference.md#library)
 that can be called upon when needed.
 
-Now that we have looked at some basic concepts like lists and loops, lets look at
-digging into some of the data we have been provided!
-
 ## Loading data into Python
 
 To begin processing the clinical trial inflammation data, we need to load it into Python.

@@ -3,17 +3,6 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-## Welcome to SWD1a: Introduction to Python
-
-This website contains materials from [The Carpentries](https://carpentries.org/), with
-some small modifications to tailor it to our needs for *SWD1a: Introduction to Python*
-here at the University of Leeds.
-
-Please refer to your course hackpad for additional links, topics, and discussion
-points specific to your course.
-
-## The format of this workshop
-
 The best way to learn how to program is to do something useful,
 so this introduction to Python is built around a common scientific task:
 **data analysis**.
@@ -81,9 +70,8 @@ recommend if possible.
 
 ### Getting Started
 
-To get started, follow the directions on the [Setup](learners/setup.md) page to open up Google colab.
-After the course, you can follow the intructions here to install a Python interpreter locally on your
-machine.
+To get started, follow the directions on the [Setup](learners/setup.md) page to download data
+and install a Python interpreter.
 
 
 
